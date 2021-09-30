@@ -1,0 +1,8 @@
+Column.Sort <- function(x,a,b){
+  xs <- sort(x,decreasing = F, index.return=TRUE)
+  xindex <- xs$ix
+  xn <- x + runif(length(x),a,b)
+  #xn[xindex]
+  xn = sort(xn)
+  xn[rank(x)]
+}
